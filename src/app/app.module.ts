@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'encounters', component: EncountersComponent},
   { path: 'report', component: ReportComponent},
-  { path: '***', component: NotfoundComponent }
+  { path: '**', component: NotfoundComponent }
 ];
 
 @NgModule({

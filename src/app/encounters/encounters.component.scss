@@ -2,7 +2,21 @@
 
 
 
-body{
+.heading-encounter{
+    display: flex;
+    justify-content: center;   
+    flex-wrap: wrap;
+    font-family: "Roboto",sans-serif;
+    font-size: 2rem;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    padding:1.2rem 0;
+    font-weight:100;
+    }
+
+.encounter-body{
     width:100%;
 }
 
@@ -28,6 +42,7 @@ body{
     font-size:18px;
     font-family:"Roboto", sans-serif;
     margin-bottom:1.2rem;
+    font-weight:100;
 }
 .encounters-footer{
     height:141px;
@@ -40,16 +55,3 @@ body{
     align-items:center;
 }
 
-
-    .heading-encounter{
-    display: flex;
-    justify-content: center;   
-    flex-wrap: wrap;
-    font-family: "Roboto",sans-serif;
-    font-size: 2rem;
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    top: 0;
-    padding:1.2rem 0;
-    }

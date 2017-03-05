@@ -58,5 +58,6 @@ table {
     flex-wrap: wrap;
     font-family:"Roboto",sans-serif;
     font-size:2.3rem;
+	font-weight:100;
     
 }
