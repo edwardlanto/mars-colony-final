@@ -1,0 +1,105 @@
+.register-body{
+    background-color:black;
+    color:black;
+    height:100vh;
+    width:100%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+
+
+.register-heading{
+    color:white;
+    text-align:center;
+    font-size:2rem;
+    font-family:"Roboto",sans-serif;
+    padding:2rem 1rem;
+}
+
+.name-input{
+    border-bottom:1px solid white;
+    width:100%;
+}
+
+.register-button{  // Check in button
+    background-color:black;
+    color:white;
+    border:none;
+    font-size:2rem;
+    width:100%;
+    font-family:"Roboto",sans-serif;
+}
+
+fieldset{
+    border:none;
+    border-bottom:1px solid white;
+}
+
+input{
+    background-color:black;
+    display:block;
+    border:black;
+    padding-left:0.5rem;
+    width:80vw;
+    padding:1rem 0rem;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:red;
+    font-size:1rem;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    red;
+   opacity:  1;
+   font-size:1rem;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    red;
+   opacity:  1;
+   font-size:1rem;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:red;
+   font-size:1rem;
+}
+
+.register-select{
+    background-color:black;
+    border:none;
+    color:red;
+    font-size:1rem;
+    padding:1rem 0;
+    -webkit-appearance:none;
+    width:100%;
+}
+
+option{
+    color:red
+}
+
+//Invalid Form Animation
+.ng-invalid.submitting input, .ng-invalid.submitting select{
+    animation: invalid-error 0.5s infinite;
+    border:1px solid black;
+}
+
+.ng-dirty.submitting input{
+    animation: invalid-error 0 infinite;
+}
+
+
+
+@keyframes invalid-error{
+    0%{
+        box-shadow:0 0 0 0 darkred;
+        }
+    100%{
+        box-shadow:0 0 0 10px rgba(237, 67, 67, 0.2);
+        }
+}
+

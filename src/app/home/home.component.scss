@@ -1,0 +1,113 @@
+body{
+    box-sizing:border-box;
+}
+
+.home-body{
+    width:100vw;
+    background:linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,0.701961)),url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:space-around;
+    
+}
+
+.mars-colony-title{
+    color:white;
+    font-family:"Roboto",sans-serif;
+    text-transform:uppercase;
+    font-size:2rem;
+}
+
+.tap-text{
+    font-family:"Roboto",sans-serif;
+    color:white;
+    font-size:1.8rem;
+}
+
+// Register Circle Animation
+
+.entry-button-container{
+    width:75px;
+    height:75px;
+    background-color:rgba(237,237,237,.2);
+    opacity:0.2;
+    border-radius: 50px;
+    animation: circle-pulse-4 2s infinite;
+    display:inline-block;
+}
+
+@keyframes circle-pulse-4{
+    0%{box-shadow:  0 0 10px 100px #888888; opacity:0.2;}
+    25%{box-shadow:  0 0 10px 80px #888888; opacity:0;}
+    50%{box-shadow:  0 0 10px 60px #888888; opacity:0;}
+    75%{box-shadow:  0 0 10px 40px #888888; opacity:0;}
+    100%{box-shadow: 0 0 10px 20px #888888; opacity:0;}
+    
+}
+
+.circle-1{
+    height:75px;
+    width:75px;
+    background-color:rgba(237,237,237,.2);
+    border-radius:50px;
+    animation:circle-pulse-3 2s infinite;
+    transform: translatey(-75px);
+}
+
+@keyframes circle-pulse-3{
+    0%{box-shadow:  0 0 10px 80px #888888; opacity:0.2;}
+    25%{box-shadow:  0 0 10px 60px #888888; opacity:0.1;}
+    50%{box-shadow:  0 0 10px 40px #888888; opacity:0.2;}
+    75%{box-shadow:  0 0 10px 20px #888888; opacity:0.2;}
+    100%{box-shadow: 0 0 10px 20px #888888; opacity:0.2;}
+    
+}
+
+// .circle-2{
+//     height:75px;
+//     width:75px;
+//     background-color:rgba(237,237,237,.2);
+//     border-radius:50px;
+//     animation:circle-pulse-2 2s infinite;
+//     transform: translatey(-150px);
+// }
+
+// @keyframes circle-pulse-2{
+//     0%{box-shadow:  0 0 10px 80px #888888; opacity:0.2;}
+//     25%{box-shadow:  0 0 10px 60px #888888; opacity:0;}
+//     50%{box-shadow:  0 0 10px 40px #888888; opacity:0;}
+//     75%{box-shadow:  0 0 10px 20px #888888; opacity:0;}
+//     100%{box-shadow: 0 0 10px 20px #888888; opacity:0.2;}
+    
+// }
+
+// .circle-3{
+//     height:75px;
+//     width:75px;
+//     background-color:rgba(237,237,237,.2);
+//     border-radius:50px;
+//     animation:circle-pulse-1 2s infinite;
+//     transform: translatey(-225px);
+// }
+
+// @keyframes circle-pulse-1{
+//     0%{box-shadow:  0 0 10px 60px #888888; opacity:0.05;}
+//     100%{box-shadow: 0 0 10px 40px #888888; opacity:0.05;}
+    
+// }
+
+
+
+.entry-button{
+    width:75px;
+    height:75px;
+    
+   
+}
+
+
+

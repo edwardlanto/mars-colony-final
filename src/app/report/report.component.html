@@ -1,0 +1,24 @@
+<!--Animaion-->
+<ng2-page-transition>
+<router-outlet></router-outlet>
+
+<body class = "report-body">
+  <header class ="report-header">
+    <h1 class="heading-center report-heading">Report Encounter
+      <span class ="report-heading-span">Safety on Mars is your responsibility</span>
+    </h1>
+  </header>
+  <form [formGroup]="reportForm" class="report-form" [ngClass]="{invalid:reportForm.invalid}" (ngSubmit)="saveNewEncounter($event)">
+  <fieldset class="report-fieldset">
+    <select formControlName="atype" class = "report-select">
+      <option value ="">Select alien type</option>
+      <option *ngFor = "let alien of alienType " value= "{{ alien.type }}">{{ alien.type }}</option>
+    </select>
+      <textarea placeholder="Action Taken" class ="report-textarea" formControlName="action" name="action"> 
+      </textarea>
+      <button type="submit" class="submit-button">Submit Report</button>
+    </fieldset>
+  </form>
+</body>
+
+</ng2-page-transition>

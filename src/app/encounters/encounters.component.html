@@ -1,0 +1,17 @@
+<ng2-page-transition>
+<router-outlet></router-outlet>
+
+    <body>
+      <h1 class="heading-encounter">Recent Encounters
+        <span class="paragraph-center">See an Alien? Report it!</span>
+      </h1>
+      <ul class="encounter-list">
+        <li *ngFor="let encounter of encounters" class="encounter-item">{{encounter.date}} - {{encounter.atype}}
+          <p>{{encounter.action}}</p>
+        </li>
+      </ul>
+      <footer class="encounters-footer">
+        <a href="/report" class="report-encounter-text">Report Encounter</a>
+      </footer>
+    </body>
+</ng2-page-transition>
