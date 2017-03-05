@@ -5,7 +5,7 @@
 
 .home-body{
     width:100vw;
-    background:linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,0.701961)),url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    background-image:url("/images/mars-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height:100vh;
@@ -44,7 +44,7 @@
 }
 
 @keyframes circle-pulse-4{
-    0%{box-shadow:  0 0 10px 100px #888888; opacity:0.2;}
+    0%{box-shadow:  0 0 10px 120px #888888; opacity:0.2;}
     25%{box-shadow:  0 0 10px 80px #888888; opacity:0;}
     50%{box-shadow:  0 0 10px 60px #888888; opacity:0;}
     75%{box-shadow:  0 0 10px 40px #888888; opacity:0;}
@@ -93,9 +93,20 @@
 .entry-button{
     width:75px;
     height:75px;
-    
-   
+    padding-top:150px;
 }
 
+.entry-button:hover{
+    animation:spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 
 

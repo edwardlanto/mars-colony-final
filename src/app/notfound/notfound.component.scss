@@ -12,6 +12,7 @@ code{
     padding: 3px 4px;
     line-height:1;
     font-family:"Roboto Mono", monospace;
+    font-size:13px;
 }
 
 .notfound-header{
@@ -26,6 +27,12 @@ code{
     margin-bottom:16px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+}
+
 
 img{
     width:220px;
