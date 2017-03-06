@@ -61,3 +61,29 @@ table {
 	font-weight:100;
     
 }
+
+.loading-screen{
+	font-family:"Roboto", sans-serif;
+	font-size:30px;
+	color:red;
+	border:3px solid green;
+	font-weight:bold;
+	animation: loading-move 2s infinite;
+}
+
+@keyframes loading-move{
+	0%{
+		transform: skewX(0);
+        transform: translateY(0);
+	}
+
+    50%{
+        transform: skewX(20%);
+        transform:translateY(50px);
+    }
+	100%{
+		transform: skewX(50%);
+        transform: translateY(100px);
+	}
+}
+
