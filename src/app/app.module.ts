@@ -14,12 +14,14 @@ import { RegisterComponent } from './register/register.component';
 import { EncountersComponent } from './encounters/encounters.component';
 import { ReportComponent } from './report/report.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'encounters', component: EncountersComponent},
   { path: 'report', component: ReportComponent},
+  { path: 'blog', component: BlogComponent},
   { path: '**', component: NotfoundComponent }
 ];
 
@@ -30,7 +32,8 @@ const routes: Routes = [
     RegisterComponent,
     EncountersComponent,
     ReportComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

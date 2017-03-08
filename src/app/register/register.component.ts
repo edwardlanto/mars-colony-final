@@ -72,6 +72,7 @@ export class RegisterComponent implements OnInit {
                 .subscribe((result) => {
                   this.router.navigate(['encounters']);
                   console.log('Colonist as saved:', result);
+                  localStorage.setItem('colonistStorage',JSON.stringify(result.id))
                 });
     }//else
 

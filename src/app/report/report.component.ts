@@ -45,14 +45,18 @@ getAliens(){
 
     }else{
       const date = new Date().toString();
+      const colonistStore = localStorage.getItem('colonistStorage');
       const atype = this.reportForm.get('atype').value;
       const colonist_id = 4;
       const action = this.reportForm.get('action').value;
+      console.log(localStorage.getItem('colonistStorage'));
       const newEncounter = new NewEncounter(date, atype, colonist_id, action);
       this.EncountersAPIService.saveNewEncounter({ encounter : newEncounter })
                 .subscribe((result) => {
                   this.router.navigate(['encounters']);
-                  console.log('Colonist as saved');
+                  // console.log('Colonist as saved');
+                  
+                  
                 });
     }//else
 
