@@ -43,7 +43,3 @@ ngOnInit(){
   
   
   
-  
-  //   this.EncountersAPIService.getEncounters()
-  //  .subscribe((result) => {
-  //       this.EncounterAPIService.encounter = result;
