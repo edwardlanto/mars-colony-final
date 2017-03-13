@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ENCOUNTERS_URL} from '../models/api';
+import { ENCOUNTERS_URL } from '../models/api';
 import { EncountersAPIService } from '../apiService/encounters';
 import { Encounter } from '../models/';
 
@@ -12,34 +12,34 @@ import { Encounter } from '../models/';
 
 
 export class EncountersComponent implements OnInit {
-  encounters:Encounter[];
-  customAnimation:any = {custom:true, state:""};
+  encounters: Encounter[];
+  customAnimation: any = { custom: true, state: "" };
 
 
-  constructor(private encountersAPIService: EncountersAPIService) { 
+  constructor(private encountersAPIService: EncountersAPIService) {
     this.getEncounters();
   }//constructor
-  
 
 
 
-  getEncounters(){
-     this.encountersAPIService.getEncounters()
-                        .subscribe((result) => {
-                        this.encounters = result;
-                        console.log(result);
-                        })//subscribe-result
+
+  getEncounters() {
+    this.encountersAPIService.getEncounters()
+      .subscribe((result) => {
+        this.encounters = result;
+        console.log(result);
+      })//subscribe-result
   }
 
 
-ngOnInit(){
+  ngOnInit() {
+
+  }
+
+
 
 }
 
 
 
-}
-  
-  
-  
-  
+

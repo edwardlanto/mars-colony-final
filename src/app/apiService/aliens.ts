@@ -11,12 +11,12 @@ import { ALIENS_URL } from '../models/API';
 @Injectable()
 export class AliensAPIService {
 
-    constructor(private http: Http){}
+    constructor(private http: Http) { }
 
-    getAliens(): Observable<Alien[]>{
-        return this.http.get( ALIENS_URL )
-                .map((res:Response) => res.json().aliens);
-   
+    getAliens(): Observable<Alien[]> {
+        return this.http.get(ALIENS_URL)
+            .map((res: Response) => res.json().aliens);
+
     }
 }//class ColonistAPIService
 

@@ -18,14 +18,14 @@ export class RegisterComponent implements OnInit {
   newColonist: NewColonist;
   marsJobs: Job[];
   registerForm: FormGroup;
-  clickedSubmit:boolean;
-  
+  clickedSubmit: boolean;
+
   constructor(private colonistApiService: ColonistAPIService,
-              private JobAPIService: JobAPIService,
-              private router: Router) {
-    
-    
-    
+    private JobAPIService: JobAPIService,
+    private router: Router) {
+
+
+
     this.clickedSubmit = false;
     this.registerForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(2)]),
@@ -34,46 +34,46 @@ export class RegisterComponent implements OnInit {
     });//FormGroup
 
     this.getMarsJobs();
-     
+
   }//constructor
 
-  acceptAge(min:number, max:number){
-    return (control: AbstractControl):{ [key: string]: any} => {
-        if (control.value < min || control.value > max){
-          return { "Sorry good luck": { age: control.value}};
-        }//if statement
+  acceptAge(min: number, max: number) {
+    return (control: AbstractControl): { [key: string]: any } => {
+      if (control.value < min || control.value > max) {
+        return { "Sorry good luck": { age: control.value } };
+      }//if statement
     }//return line 39
   }//acceptAge method
 
 
-  getMarsJobs(){
-     this.JobAPIService.getMarsJobs()
-                        .subscribe((result) => {
-                          this.marsJobs = result;
-                        })
+  getMarsJobs() {
+    this.JobAPIService.getMarsJobs()
+      .subscribe((result) => {
+        this.marsJobs = result;
+      })
 
   }//getMarsJobsMethod
 
-  postNewColonist(event){
+  postNewColonist(event) {
     event.preventDefault();
     console.log('Posting colonists...');
     this.clickedSubmit = true;
-    
-    if (this.registerForm.invalid){
-      
 
-    }else{
+    if (this.registerForm.invalid) {
+
+
+    } else {
       const name = this.registerForm.get('name').value;
       const age = this.registerForm.get('age').value;
       const job_id = this.registerForm.get('job_id').value;
       console.log(NewColonist);
       const newColonist = new NewColonist(name, age, job_id);
       this.colonistApiService.saveColonist({ colonist: newColonist })
-                .subscribe((result) => {
-                  this.router.navigate(['encounters']);
-                  console.log('Colonist as saved:', result);
-                  localStorage.setItem('colonistStorage',JSON.stringify(result.id))
-                });
+        .subscribe((result) => {
+          this.router.navigate(['encounters']);
+          console.log('Colonist as saved:', result);
+          localStorage.setItem('colonistStorage', JSON.stringify(result.id))
+        });
     }//else
 
   }//postNewColonist

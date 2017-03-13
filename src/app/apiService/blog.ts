@@ -13,15 +13,15 @@ export class BlogAPIService {
 
 
 
-    constructor(private http: Http){}
+    constructor(private http: Http) { }
 
-    getBlogPosts():Observable<Response>{
-            return this.http.get( BLOG_URL )
-                .map((res: Response) => res.json());
+    getBlogPosts(): Observable<Response> {
+        return this.http.get(BLOG_URL)
+            .map((res: Response) => res.json());
 
     }//getEncounters
 
-    }//saveNewEncounter
-   
+}//saveNewEncounter
+
 
 
