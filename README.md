@@ -2,6 +2,8 @@
 
 ### Project Summary ###
 
+A web application that uses Angular to make HTTP request to grab jSON formatted data from API and put it on a component. Also has form validation to confirm legitimate inputs. Includes a home and registration page, an alien encounters, report and blog page.
+
 # Technologies Used
 
 ## Gulp
